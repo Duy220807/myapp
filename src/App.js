@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Ninjas from "./Ninjas";
+import AddNinja from "./Addninja";
 function App() {
+  const state = {
+    ninjas: [
+      { name: 'Ryu', age: 10, belt: 'black', id: 1 },
+      { name: 'Yoshi', age: 22, belt: 'black', id: 2 },
+      { name: 'Mario', age: 22, belt: 'black', id: 3 }
+    ]
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Hello</h2>
+      <Ninjas ninjas={state.ninjas} />
+      <AddNinja />
     </div>
-  );
+  )
 }
 
 export default App;
